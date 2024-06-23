@@ -82,4 +82,12 @@
     <b>Customizado 2</b>:
     {{ "2023-10-21T21:00:00.000Z" | date : "'Data:' dd/MM/YY 'Hora:' HH:mm a" }}
   </span>
+  <span>
+    <b>Localidade</b>:
+    {{ "2023-10-21T21:00:00.000Z" | date : "full" : undefined : "pt-BR" }}
+  </span>
+  <span>
+    <b>Padrão Customizado</b>:
+    {{ "2023-10-21T21:00:00.000Z" | date }}
+  </span>
 </div>
