@@ -59,3 +59,27 @@
     {{ minhaDataObj | date : "full" : "+0000" }}
   </span>
 </div>
+<div class="container">
+  <h3>Formatações de Datas</h3>
+  <span> <b>Curto</b>: {{ "2023-10-21T21:00:00.000Z" | date : "short" }} </span>
+  <span>
+    <b>Médio</b>: {{ "2023-10-21T21:00:00.000Z" | date : "medium" }}
+  </span>
+  <span> <b>Longo</b>: {{ "2023-10-21T21:00:00.000Z" | date : "long" }} </span>
+  <span>
+    <b>Completo</b>: {{ "2023-10-21T21:00:00.000Z" | date : "full" }}
+  </span>
+  <span>
+    <b>Customizado 1</b>:
+    {{
+      "2023-10-21T21:00:00.000Z"
+        | date
+          : "'Hoje é' EEEE 'dia' dd 'de' MMMM 'de' YYYY 'às' HH:mm zzzz"
+          : "+0000"
+    }}
+  </span>
+  <span>
+    <b>Customizado 2</b>:
+    {{ "2023-10-21T21:00:00.000Z" | date : "'Data:' dd/MM/YY 'Hora:' HH:mm a" }}
+  </span>
+</div>
