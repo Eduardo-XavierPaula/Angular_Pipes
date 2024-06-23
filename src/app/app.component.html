@@ -1,6 +1,6 @@
 <div class="container">
   <span>
-    Pipe do angular:
+    Pipe nativo do angular:
     {{ pessoa.nome | uppercase }}
   </span>
   <span>
@@ -16,5 +16,46 @@
   </span>
   <span>
     Custom Pipe com parâmetro: {{ pessoa.nome | truncate : 2 | uppercase }}
+  </span>
+</div>
+<div class="container">
+  <span>
+    {{ "Olá mundo" | slice : 0 : 3 }}
+  </span>
+  <span>
+    {{ "Olá mundo" | slice : 4 }}
+  </span>
+  <span>
+    {{ [1, 2, 3, 4, 5] | slice : 0 : 3 }}
+  </span>
+  @for (item of [1,2,3,4,5] | slice : 0 : 2 ; track $index) {
+  <span>{{ item }}</span>
+  }
+</div>
+
+<div class="container">
+  <h3>Formato ISO:8601</h3>
+  <span>
+    <b>Data Convertida para a região</b>: {{ minhaData | date : "full" }}
+  </span>
+  <span> <b>Data UTC-0</b>: {{ minhaData | date : "full" : "+0000" }} </span>
+</div>
+<div class="container">
+  <h3>Formato Timestamp</h3>
+  <span>
+    <b>Timestamp para a região</b>: {{ 1697922000000 | date : "full" }}
+  </span>
+  <span>
+    <b>Timestamp para UTC-0</b>: {{ 1697922000000 | date : "full" : "+0000" }}
+  </span>
+</div>
+<div class="container">
+  <h3>Formato Date Obj</h3>
+  <span>
+    <b>Data convertida para a região</b>: {{ minhaDataObj | date : "full" }}
+  </span>
+  <span>
+    <b>Data convertida para UTC-0</b>:
+    {{ minhaDataObj | date : "full" : "+0000" }}
   </span>
 </div>
