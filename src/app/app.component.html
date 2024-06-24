@@ -91,3 +91,26 @@
     {{ "2023-10-21T21:00:00.000Z" | date }}
   </span>
 </div>
+<div class="container">
+  <h3>Decimais</h3>
+  <span>
+    <b>Conversão 12.3</b>:
+    {{ 12.3 | number : "3.0-2" : "en-US" }}
+  </span>
+  <span>
+    <b>Conversão 1212.3 (padrão en-US)</b>:
+    {{ 1212.3 | number : "3.0-2" : "en-US" }}
+  </span>
+  <span>
+    <b>Conversão 1234.1 (padrão en-US)</b>:
+    {{ 1234.1 | number : "1.2-3" : "en-US" }}
+  </span>
+  <span>
+    <b>Conversão 1234.1236 (padrão en-US)</b>:
+    {{ 1234.1236 | number : "1.2-3" : "en-US" }}
+  </span>
+  <span>
+    <b>Conversão 1234.1236 (padrão pt-BR)</b>:
+    {{ 1234.1236 | number : undefined : "pt-BR" }}
+  </span>
+</div>
