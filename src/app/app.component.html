@@ -114,3 +114,21 @@
     {{ 1234.1236 | number : undefined : "pt-BR" }}
   </span>
 </div>
+<div class="container">
+  <h3>Moeda</h3>
+  <span>
+    {{ 10000.99 | currency : "BRL" : "symbol" }}
+  </span>
+  <span>
+    {{ 10000.99 | currency : "BRL" : "code" }}
+  </span>
+  <span>
+    {{ 10000.99 | currency : "BRL" : "TESTE" }}
+  </span>
+  <span>
+    {{ 0.969 | currency : "USD" : "symbol-narrow" : "2.2-2" : "en-US" }}
+  </span>
+  <span>
+    {{ 1 | currency }}
+  </span>
+</div>

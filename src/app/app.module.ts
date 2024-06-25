@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +30,10 @@ registerLocaleData(localePt, 'pt-BR');
     {
       provide: DATE_PIPE_DEFAULT_OPTIONS,
       useValue: datePipeConfig,
+    },
+    {
+      provide: DEFAULT_CURRENCY_CODE,
+      useValue: 'BRL',
     },
   ],
   bootstrap: [AppComponent],
