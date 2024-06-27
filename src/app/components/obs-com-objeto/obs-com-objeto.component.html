@@ -1,0 +1,18 @@
+<h3>Async Pipe com Objeto</h3>
+
+<p>{{ user | json }}</p>
+<p>Name: {{ user.name }}</p>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+
+<h3>Subscribe pelo Async Pipe</h3>
+@if(user$ | async; as meuUser){
+<p>{{ meuUser | json }}</p>
+<p>Name: {{ meuUser.name }}</p>
+<p>Username: {{ meuUser.username }}</p>
+<p>Email: {{ meuUser.email }}</p>
+}
+
+<button (click)="onBtnClick(1)">1</button>
+<button (click)="onBtnClick(2)">2</button>
+<button (click)="onBtnClick(3)">3</button>
