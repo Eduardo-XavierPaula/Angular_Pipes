@@ -1,0 +1,13 @@
+<h3>Async pipe com promise</h3>
+@if(userPromise |async; as user){
+<p>Nome: {{ user.name }}</p>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+} @else { Carregando... }
+<hr />
+<h4>Observable to promise</h4>
+@if(userByIdPromise |async; as userById){
+<p>Nome: {{ userById.name }}</p>
+<p>Username: {{ userById.username }}</p>
+<p>Email: {{ userById.email }}</p>
+} @else { Carregando... }

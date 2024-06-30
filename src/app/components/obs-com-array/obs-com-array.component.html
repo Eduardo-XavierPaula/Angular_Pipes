@@ -1,0 +1,8 @@
+<h3>Async Pipe com array</h3>
+<h4>Subscribe com async Pipe:</h4>
+@for (user of users$ | async; track $index) {
+<p>Nome: {{ user.name }}</p>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<hr />
+}

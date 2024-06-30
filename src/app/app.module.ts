@@ -14,6 +14,8 @@ import { registerLocaleData } from '@angular/common';
 import { LOCALE_ID } from '@angular/core';
 import { ObsComObjetoComponent } from './components/obs-com-objeto/obs-com-objeto.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ObsComArrayComponent } from './components/obs-com-array/obs-com-array.component';
+import { ObsComPromiseComponent } from './components/obs-com-promise/obs-com-promise.component';
 
 const datePipeConfig: DatePipeConfig = {
   dateFormat: 'dd/MM/YYYY',
@@ -27,6 +29,8 @@ registerLocaleData(localePt, 'pt-BR');
     UserStatusPipe,
     TruncatePipe,
     ObsComObjetoComponent,
+    ObsComArrayComponent,
+    ObsComPromiseComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
