@@ -2,13 +2,14 @@
 <div>
   <p>Nome: {{ user.name }}</p>
   <p>Nome: {{ user.status | userStatus }}</p>
-
+  @if(user.status < 3){
   <img
     [src]="user.status | userStatusImage"
     alt="usuário {{ $index }}"
     width="24"
     height="24"
   />
+  }
 </div>
 <button (click)="inactivateUser($index)">Inativar usuário</button>
 }

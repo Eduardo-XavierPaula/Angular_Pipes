@@ -15,6 +15,10 @@ export class UsersComponent {
       name: 'jon doe',
       status: 2,
     },
+    {
+      name: 'doe jon',
+      status: 3,
+    },
   ];
   inactivateUser(userIndex: number) {
     this.users[userIndex].status === 1

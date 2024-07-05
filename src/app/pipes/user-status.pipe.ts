@@ -13,12 +13,18 @@ export class UserStatusPipe implements PipeTransform {
     // } else {
     //   return 'Inválido';
     // }
+    try {
+      if (userStatus === 3) {
+        throw new Error('Ocorreu um erro.');
+      }
+      const userStatusDescription: { [key: number]: string } = {
+        [UserStatusEnum.ATIVO]: 'Ativo',
+        [UserStatusEnum.INATIVO]: 'Inativo',
+      };
 
-    const userStatusDescription: { [key: number]: string } = {
-      [UserStatusEnum.ATIVO]: 'Ativo',
-      [UserStatusEnum.INATIVO]: 'Inativo',
-    };
-
-    return userStatusDescription[userStatus] ?? 'Inválido';
+      return userStatusDescription[userStatus] ?? 'Inválido';
+    } catch (error) {
+      return 'Status Inválido';
+    }
   }
 }
