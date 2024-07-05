@@ -16,6 +16,8 @@ import { ObsComObjetoComponent } from './components/obs-com-objeto/obs-com-objet
 import { HttpClientModule } from '@angular/common/http';
 import { ObsComArrayComponent } from './components/obs-com-array/obs-com-array.component';
 import { ObsComPromiseComponent } from './components/obs-com-promise/obs-com-promise.component';
+import { UserStatusImagePipe } from './pipes/user-status-image.pipe';
+import { UsersComponent } from './components/users/users.component';
 
 const datePipeConfig: DatePipeConfig = {
   dateFormat: 'dd/MM/YYYY',
@@ -31,6 +33,8 @@ registerLocaleData(localePt, 'pt-BR');
     ObsComObjetoComponent,
     ObsComArrayComponent,
     ObsComPromiseComponent,
+    UserStatusImagePipe,
+    UsersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [

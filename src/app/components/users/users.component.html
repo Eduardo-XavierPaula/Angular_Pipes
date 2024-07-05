@@ -1,0 +1,14 @@
+@for (user of users; track $index) {
+<div>
+  <p>Nome: {{ user.name }}</p>
+  <p>Nome: {{ user.status | userStatus }}</p>
+
+  <img
+    [src]="user.status | userStatusImage"
+    alt="usuário {{ $index }}"
+    width="24"
+    height="24"
+  />
+</div>
+<button (click)="inactivateUser($index)">Inativar usuário</button>
+}
